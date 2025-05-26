@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "content": "```json\n{\n    \"虚假陈述实施日\": \"2017-03-21\",\n    \"虚假陈述揭露日\": \"2018-02-10\",\n    \"更正日\": \"\",\n    \"立案日期\": \"2018-02-09\",\n    \"裁判日期\": \"2023-04-23\",\n    \"诉讼请求金额\": 13769.68,\n    \"实际支持金额\": 4130.9,\n    \"被告名称\": \"獐子岛集团股份有限公司\",\n    \"虚假陈述种类\": \"财务数据造假,关联交易隐瞒,重大合同隐瞒,股权情况造假,重大风险隐瞒,不当披露预测性信息,误导性陈述,不正当披露,重大债务损失隐瞒,承诺履行情况隐瞒,经营情况造假\",\n    \"是否采取第三方核定计算书\": false,\n    \"重大性\": true,\n    \"是否连带中介结构\": false,\n    \"省份\": \"辽宁省\"\n}\n```",
+  "model": "deepseek-chat",
+  "usage": {
+    "completion_tokens": 193,
+    "prompt_tokens": 9887,
+    "total_tokens": 10080,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 9631
+  }
+}

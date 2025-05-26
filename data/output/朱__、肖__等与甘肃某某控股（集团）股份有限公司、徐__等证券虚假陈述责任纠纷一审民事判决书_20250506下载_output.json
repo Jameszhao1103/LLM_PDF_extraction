@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "content": "```json\n{\n    \"虚假陈述实施日\": \"2016-11-25\",\n    \"虚假陈述揭露日\": \"2019-04-10\",\n    \"更正日\": \"\",\n    \"立案日期\": \"\",\n    \"裁判日期\": \"2024-06-28\",\n    \"诉讼请求金额\": 0,\n    \"实际支持金额\": 0,\n    \"被告名称\": \"甘肃某某控股（集团）股份有限公司, 徐某刚, 周某, 赵某俊, 王某明, 某某事务所（特殊普通合伙）\",\n    \"虚假陈述种类\": \"重大债务损失隐瞒, 重大风险隐瞒\",\n    \"是否采取第三方核定计算书\": true,\n    \"重大性\": true,\n    \"是否连带中介结构\": true,\n    \"省份\": \"甘肃省\"\n}\n```",
+  "model": "deepseek-chat",
+  "usage": {
+    "completion_tokens": 171,
+    "prompt_tokens": 13005,
+    "total_tokens": 13176,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 12749
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "content": "```json\n{\n    \"虚假陈述实施日\": \"2016-03-01\",\n    \"虚假陈述揭露日\": \"2018-01-22\",\n    \"更正日\": \"\",\n    \"立案日期\": \"2024-03-07\",\n    \"裁判日期\": \"2024-06-28\",\n    \"诉讼请求金额\": 275675.40,\n    \"实际支持金额\": 0,\n    \"被告名称\": \"某地产股份有限公司\",\n    \"虚假陈述种类\": \"重大合同隐瞒,重大风险隐瞒\",\n    \"是否采取第三方核定计算书\": false,\n    \"重大性\": false,\n    \"是否连带中介结构\": false,\n    \"省份\": \"浙江省\"\n}\n```",
+  "model": "deepseek-chat",
+  "usage": {
+    "completion_tokens": 148,
+    "prompt_tokens": 8042,
+    "total_tokens": 8190,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 7786
+  }
+}

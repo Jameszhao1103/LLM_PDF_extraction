@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "content": "```json\n{\n    \"虚假陈述实施日\": \"2014-10-30\",\n    \"虚假陈述揭露日\": \"2016-12-29\",\n    \"更正日\": \"\",\n    \"立案日期\": \"2017-08-31\",\n    \"裁判日期\": \"2018-02-07\",\n    \"诉讼请求金额\": 885282.05,\n    \"实际支持金额\": 364435.2,\n    \"被告名称\": \"江苏保千里视像科技集团股份有限公司,庄敏,陈海昌,庄明,蒋俊杰\",\n    \"虚假陈述种类\": \"财务数据造假,关联交易隐瞒\",\n    \"是否采取第三方核定计算书\": false,\n    \"重大性\": true,\n    \"是否连带中介结构\": false,\n    \"省份\": \"广东省\"\n}\n```",
+  "model": "deepseek-chat",
+  "usage": {
+    "completion_tokens": 170,
+    "prompt_tokens": 9982,
+    "total_tokens": 10152,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 9726
+  }
+}

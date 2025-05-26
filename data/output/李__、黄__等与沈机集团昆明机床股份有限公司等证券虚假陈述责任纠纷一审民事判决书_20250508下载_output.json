@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "content": "```json\n{\n    \"虚假陈述实施日\": \"2015-11-11\",\n    \"虚假陈述揭露日\": \"2016-02-05\",\n    \"更正日\": \"\",\n    \"立案日期\": \"2018-01-02\",\n    \"裁判日期\": \"2020-07-24\",\n    \"诉讼请求金额\": 0,\n    \"实际支持金额\": 0,\n    \"被告名称\": \"沈机集团昆明机床股份有限公司,沈阳机床（集团）有限责任公司,中德证券有限责任公司,西藏紫光卓远股权投资有限公司\",\n    \"虚假陈述种类\": \"重大合同隐瞒\",\n    \"是否采取第三方核定计算书\": false,\n    \"重大性\": true,\n    \"是否连带中介结构\": true,\n    \"省份\": \"云南省\"\n}\n```",
+  "model": "deepseek-chat",
+  "usage": {
+    "completion_tokens": 164,
+    "prompt_tokens": 16291,
+    "total_tokens": 16455,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 16035
+  }
+}

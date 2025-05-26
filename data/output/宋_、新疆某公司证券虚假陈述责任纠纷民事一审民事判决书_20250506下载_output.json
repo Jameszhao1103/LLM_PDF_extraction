@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "content": "```json\n{\n    \"虚假陈述实施日\": \"2019-04-01\",\n    \"虚假陈述揭露日\": \"2020-04-14\",\n    \"更正日\": \"2020-01-07\",\n    \"立案日期\": \"2023-01-05\",\n    \"裁判日期\": \"2024-08-30\",\n    \"诉讼请求金额\": 258311.59,\n    \"实际支持金额\": 0,\n    \"被告名称\": \"新疆某公司\",\n    \"虚假陈述种类\": \"关联交易隐瞒,重大债务损失隐瞒\",\n    \"是否采取第三方核定计算书\": true,\n    \"重大性\": false,\n    \"是否连带中介结构\": false,\n    \"省份\": \"新疆维吾尔自治区\"\n}\n```",
+  "model": "deepseek-chat",
+  "usage": {
+    "completion_tokens": 158,
+    "prompt_tokens": 16899,
+    "total_tokens": 17057,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 16643
+  }
+}

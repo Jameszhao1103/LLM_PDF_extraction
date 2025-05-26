@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "content": "```json\n{\n    \"虚假陈述实施日\": \"2016-12-31\",\n    \"虚假陈述揭露日\": \"2018-03-20\",\n    \"更正日\": \"2018-04-20\",\n    \"立案日期\": \"2019-01-01\",\n    \"裁判日期\": \"2020-12-02\",\n    \"诉讼请求金额\": 50528,\n    \"实际支持金额\": 0,\n    \"被告名称\": \"海控南海发展股份有限公司,朱强华,姚婧\",\n    \"虚假陈述种类\": \"不当披露预测性信息\",\n    \"是否采取第三方核定计算书\": false,\n    \"重大性\": false,\n    \"是否连带中介结构\": false,\n    \"省份\": \"广东省\"\n}\n```",
+  "model": "deepseek-chat",
+  "usage": {
+    "completion_tokens": 160,
+    "prompt_tokens": 15026,
+    "total_tokens": 15186,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 14770
+  }
+}

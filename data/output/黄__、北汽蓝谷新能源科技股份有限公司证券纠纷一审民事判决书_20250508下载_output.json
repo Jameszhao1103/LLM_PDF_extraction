@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "content": "```json\n{\n    \"虚假陈述实施日\": \"2011-01-15\",\n    \"虚假陈述揭露日\": \"2015-07-28\",\n    \"更正日\": \"\",\n    \"立案日期\": \"2017-01-07\",\n    \"裁判日期\": \"2018-11-09\",\n    \"诉讼请求金额\": 13295035,\n    \"实际支持金额\": 352222,\n    \"被告名称\": \"北汽蓝谷新能源科技股份有限公司\",\n    \"虚假陈述种类\": \"重大债务损失隐瞒,关联交易隐瞒\",\n    \"是否采取第三方核定计算书\": false,\n    \"重大性\": true,\n    \"是否连带中介结构\": false,\n    \"省份\": \"四川省\"\n}\n```",
+  "model": "deepseek-chat",
+  "usage": {
+    "completion_tokens": 153,
+    "prompt_tokens": 6643,
+    "total_tokens": 6796,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 6387
+  }
+}

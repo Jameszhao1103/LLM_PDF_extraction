@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "content": "```json\n{\n    \"虚假陈述实施日\": \"2013-04-19\",\n    \"虚假陈述揭露日\": \"2016-04-19\",\n    \"更正日\": \"\",\n    \"立案日期\": \"2023-09-25\",\n    \"裁判日期\": \"2024-01-11\",\n    \"诉讼请求金额\": 170492.87,\n    \"实际支持金额\": 158932.00,\n    \"被告名称\": \"宁波中百股份有限公司\",\n    \"虚假陈述种类\": \"\",\n    \"是否采取第三方核定计算书\": false,\n    \"重大性\": true,\n    \"是否连带中介结构\": false,\n    \"省份\": \"浙江省\"\n}\n```",
+  "model": "deepseek-chat",
+  "usage": {
+    "completion_tokens": 144,
+    "prompt_tokens": 1377,
+    "total_tokens": 1521,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 1121
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "content": "```json\n{\n    \"虚假陈述实施日\": \"2014-01-10\",\n    \"虚假陈述揭露日\": \"2015-11-24\",\n    \"更正日\": \"\",\n    \"立案日期\": \"2015-11-24\",\n    \"裁判日期\": \"2022-01-13\",\n    \"诉讼请求金额\": 949542.6,\n    \"实际支持金额\": 36785.48,\n    \"被告名称\": \"成都华泽钴镍材料股份有限公司,国信证券股份有限公司\",\n    \"虚假陈述种类\": \"关联交易隐瞒,重大债务损失隐瞒,不正当披露\",\n    \"是否采取第三方核定计算书\": true,\n    \"重大性\": true,\n    \"是否连带中介结构\": true,\n    \"省份\": \"四川省\"\n}\n```",
+  "model": "deepseek-chat",
+  "usage": {
+    "completion_tokens": 164,
+    "prompt_tokens": 8142,
+    "total_tokens": 8306,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 7886
+  }
+}

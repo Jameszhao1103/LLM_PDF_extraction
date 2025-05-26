@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "content": "```json\n{\n    \"虚假陈述实施日\": \"2013-01-08\",\n    \"虚假陈述揭露日\": \"2014-12-02\",\n    \"更正日\": \"\",\n    \"立案日期\": \"2014-12-01\",\n    \"裁判日期\": \"2016-12-02\",\n    \"诉讼请求金额\": 0,\n    \"实际支持金额\": 6009808.3,\n    \"被告名称\": \"东莞勤上光电股份有限公司\",\n    \"虚假陈述种类\": \"关联交易隐瞒\",\n    \"是否采取第三方核定计算书\": false,\n    \"重大性\": true,\n    \"是否连带中介结构\": false,\n    \"省份\": \"广东省\"\n}\n```",
+  "model": "deepseek-chat",
+  "usage": {
+    "completion_tokens": 147,
+    "prompt_tokens": 5059,
+    "total_tokens": 5206,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+      "audio_tokens": null,
+      "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 4803
+  }
+}
