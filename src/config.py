@@ -45,4 +45,4 @@ EXTRACTION_PROMPT = """你是一个专业的文档分析师，负责从PDF文档
 """
 
 # File paths
-DEFAULT_OUTPUT_DIR = "../data/output"
+DEFAULT_OUTPUT_DIR = "./data/output"
