@@ -2,3 +2,4 @@ PyMuPDF
 openai
 pandas
 openpyxl
+streamlit
