@@ -8,7 +8,8 @@ import time
 from pdf_extractor import PDFExtractor
 from llm_client import LLMClient
 from json_handler import JSONHandler
-from config import DEEPSEEK_API_KEY, DEEPSEEK_API_URL, MODEL_NAME, EXTRACTION_PROMPT, DEFAULT_OUTPUT_DIR
+from batch_processor import BatchDocumentProcessor, find_pdf_files
+from config import DEEPSEEK_API_KEY, DEEPSEEK_API_URL, MODEL_NAME, EXTRACTION_PROMPT, DEFAULT_OUTPUT_DIR, MAX_WORKERS
 
 def test_pdf_extraction(pdf_path):
     """Test function to check PDF extraction output"""
@@ -68,45 +69,6 @@ def process_single_pdf(pdf_path):
         print(f"❌ Error processing {pdf_path}: {str(e)}")
         return False
 
-def process_all_pdfs(input_dir="../data/input"):
-    """Process all PDF files in the input directory"""
-    start_time = time.time()
-    
-    # Find all PDF files in the input directory
-    pdf_pattern = os.path.join(input_dir, "*.pdf")
-    pdf_files = glob.glob(pdf_pattern)
-    
-    if not pdf_files:
-        print(f"No PDF files found in {input_dir}")
-        return
-    
-    print(f"Found {len(pdf_files)} PDF files in {input_dir}")
-    print("=" * 80)
-    
-    # Create output directory if it doesn't exist
-    os.makedirs(DEFAULT_OUTPUT_DIR, exist_ok=True)
-    
-    successful = 0
-    failed = 0
-    
-    for pdf_file in pdf_files:
-        if process_single_pdf(pdf_file):
-            successful += 1
-        else:
-            failed += 1
-    
-    end_time = time.time()
-    processing_time = end_time - start_time
-    
-    print("\n" + "=" * 80)
-    print("BATCH PROCESSING SUMMARY:")
-    print("=" * 80)
-    print(f"Total files processed: {len(pdf_files)}")
-    print(f"Successful: {successful}")
-    print(f"Failed: {failed}")
-    print(f"⏱️ Processed {len(pdf_files)} PDFs, took {processing_time:.2f} seconds")
-    print("=" * 80)
-
 def convert_to_excel():
     """Convert all JSON outputs to Excel format"""
     start_time = time.time()
@@ -135,12 +97,46 @@ def preview_data():
     processing_time = end_time - start_time
     print(f"\n⏱️ Preview completed, took {processing_time:.2f} seconds")
 
+def process_batch_threaded(input_dir="../data/input"):
+    """Process all PDF files in the input directory using multithreading"""
+    print(f"🚀 Starting multi-threaded batch processing from {input_dir}")
+    print("=" * 80)
+    
+    # Initialize batch processor
+    processor = BatchDocumentProcessor(max_workers=MAX_WORKERS)
+    
+    # Find all PDF files
+    pdf_files = find_pdf_files(input_dir)
+    
+    if not pdf_files:
+        print(f"No PDF files found in {input_dir}")
+        return
+    
+    print(f"Found {len(pdf_files)} PDF files")
+    
+    # Process batch
+    results = processor.process_batch(pdf_files)
+    
+    # Final summary
+    successful = sum(1 for r in results if r["status"] == "success")
+    llm_errors = sum(1 for r in results if r["status"] == "llm_error")
+    errors = sum(1 for r in results if r["status"] in ["error", "exception"])
+    
+    print("\n" + "🎉" * 20)
+    print("FINAL SUMMARY:")
+    print("🎉" * 50)
+    print(f"✅ Successful: {successful}")
+    print(f"⚠️ LLM Errors: {llm_errors}")
+    print(f"❌ Processing Errors: {errors}")
+    print(f"📈 Success Rate: {successful/len(results)*100:.1f}%")
+    print("🎉" * 50)
+
 def main():
     if len(sys.argv) < 2:
         print("Usage:")
         print("  python main.py <path_to_pdf_file>                    # Process single PDF")
         print("  python main.py test <path_to_pdf_file>               # Test PDF extraction")
-        print("  python main.py batch [input_directory]              # Process all PDFs in directory")
+        print("  python main.py batch [input_directory]              # Process all PDFs in directory (multi-threaded)")
         print("  python main.py excel                                 # Convert JSON outputs to Excel")
         print("  python main.py preview                               # Preview extracted data")
         sys.exit(1)
@@ -155,7 +151,7 @@ def main():
     
     if sys.argv[1] == "batch":
         input_dir = sys.argv[2] if len(sys.argv) > 2 else "../data/input"
-        process_all_pdfs(input_dir)
+        process_batch_threaded(input_dir)
         return
     
     if sys.argv[1] == "excel":

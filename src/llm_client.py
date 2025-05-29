@@ -1,9 +1,14 @@
 from openai import OpenAI
+import logging
 
 class LLMClient:
     def __init__(self, api_key, api_url="https://api.deepseek.com", model="deepseek-chat"):
         self.client = OpenAI(api_key=api_key, base_url=api_url)
         self.model = model
+
+        logging.getLogger("openai").setLevel(logging.WARNING)
+        logging.getLogger("httpx").setLevel(logging.WARNING)
+        logging.getLogger("httpcore").setLevel(logging.WARNING)
 
     def send_request(self, content, prompt):
         try:
